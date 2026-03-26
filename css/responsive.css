@@ -1,0 +1,129 @@
+@media screen and (min-width: 200px) and (max-width: 768px) {
+.header-layout-section {
+    padding: 15px 0px;
+
+}
+    .banner-layout-section {
+    background-position: left;
+    padding: 40px 5px;
+}
+.button-layap {
+    flex-direction: column;
+
+}
+.applynow-button  {
+    text-align: center;
+}
+.banner-layout-content h1 {
+    font-size: 28px;
+    line-height: 38px;
+}
+.banner-layout-content p {
+font-size: 16px;
+line-height: 26px;
+margin-bottom: 0px;
+padding-bottom: 0px;
+}
+
+.from-layout {
+    border-radius: 10px;
+    padding: 20px;
+}
+.career-path-layout {
+    padding: 40px 5px;
+}
+.from-layout-heading  {
+    font-size: 20px;
+}
+.career-path-layout-shortdiscription {
+    font-size: 16px;
+    line-height: 25px;
+    padding-bottom: 20px;
+}
+.career-path-layout-heading {
+    width: 100%;
+    font-size: 26px;
+    line-height: 36px;
+}
+.creative-box-img {
+    padding-bottom: 20px;
+}
+.career-chose-layouts {
+    padding: 40px 5px;
+}
+.career-chose-card {
+    padding: 10px;
+}
+.career-chose-card-img {
+    padding-bottom: 20px;
+}
+.career-chose-card-contant h1 {
+    font-size: 24px;
+    line-height: 34px;
+}
+.career-chose-card-contant p {
+    font-size: 15px;
+    width: 100%;
+    line-height: 25px;
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+}
+.career-chose-card-contant ul li {
+    font-size: 14px; 
+}
+.button-highlight {
+    flex-direction: column;
+}
+.applynow-buttons {
+    font-size: 14px;
+} 
+.career-chose-card-contant ul {
+    padding-left: 20px;
+}
+.why-student-layout {
+    padding: 40px 5px;
+    background-position: left;
+}
+.why-student-card-layouts {
+    flex-direction: column;
+    padding: 35px 15px;
+    border: solid 1px #D4D4D4;
+    border-radius: 10px;
+}
+.form-real-degin-layout {
+    padding: 40px 5px;
+}
+.design-world-layout {
+    padding: 40px 5px;
+}
+.creativity-layout {
+    padding: 40px 5px;
+}
+.why-student-reallayout {
+    padding: 40px 5px;
+}
+.creative-environment-layout {
+    padding: 40px 5px;
+}
+.creative-career-layout {
+    padding: 40px 5px;
+}
+.creative-career-layout-contant-subheading {
+    font-size: 18px;
+}
+.why-student-card-layouts-headings  {
+    text-align: center;
+}
+.why-student-card-layouts-shortdiscriptions {
+    text-align: center;
+}
+.fabiconswindow  {
+    top: inherit!important;
+    bottom: 5%!important;
+}
+.custom-card{
+    padding: 0px!important;
+}
+}
+
+

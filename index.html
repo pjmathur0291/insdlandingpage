@@ -1,0 +1,1186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>INSD WF Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+
+    <div class="header-layout-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header-layout-image text-center">
+                        <img src="images/logo.webp" class="img-fluid" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="banner-layout-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="banner-layout-content">
+                            <h1>Your Creativity Deserves a Bigger Stage.</h1>
+                            <p>Turn your passion into a professional career with Fashion
+                                Design, Interior Design, and Graphic Design programs at
+                                <span style="color:  #E53946;">INSD</span> Whitefield, Bangalore.
+                            </p>
+
+                            <ul class="py-lg-3 py-3">
+                                <li>
+                                    <span><img src="images/Icon-1.svg" class="img-fluid" alt="" sizes=""
+                                            srcset=""></span> &nbsp;&nbsp;
+                                    Studio-based learning with real design projects
+                                </li>
+                                <li>
+                                    <span><img src="images/Icon-1.svg" class="img-fluid" alt="" sizes=""
+                                            srcset=""></span> &nbsp;&nbsp;
+                                    Industry tools & software training
+                                </li>
+                                <li>
+                                    <span><img src="images/Icon-1.svg" class="img-fluid" alt="" sizes=""
+                                            srcset=""></span> &nbsp;&nbsp;
+                                    Portfolio development that gets noticed
+                                </li>
+                                <li>
+                                    <span><img src="images/Icon-1.svg" class="img-fluid" alt="" sizes=""
+                                            srcset=""></span> &nbsp;&nbsp;
+                                    Guidance from experienced design mentors
+                                </li>
+                            </ul>
+
+                            <div class="button-layap">
+                                <a class="applynow-button" href="#" data-bs-toggle="modal"
+                                    data-bs-target="#formModal">Apply Now</a>
+                                <a class="admissions-open" href="#">Admissions Open</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="row justify-content-end">
+                            <div class="col-lg-7">
+                                <div class="from-layout">
+                                    <div class="from-layout-heading"> Admissions Open</div>
+                                    <div class="from-layout-subheading mb-3">Book Free Design Career Counseling</div>
+                                    <form id="registrationForm" novalidate>
+
+                                        <div class="row">
+                                            <div class="col-md-6 mb-3">
+                                                <label class="form-label">First Name *</label>
+                                                <input type="text" id="first_name" class="form-control custom-input"
+                                                    placeholder="Enter your first name" required>
+                                                <small class="text-danger d-none" id="fnameError">First name is
+                                                    required</small>
+                                            </div>
+
+                                            <div class="col-md-6 mb-3">
+                                                <label class="form-label">Last Name *</label>
+                                                <input type="text" id="last_name" class="form-control custom-input"
+                                                    placeholder="Enter your last name" required>
+                                                <small class="text-danger d-none" id="fnameError">Last name is
+                                                    required</small>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label">Email Address *</label>
+                                            <input type="email" id="email" class="form-control custom-input"
+                                                placeholder="your.email@example.com" required>
+                                            <small class="text-danger d-none" id="fnameError">Email is
+                                                required</small>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label">Phone Number *</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text">🇮🇳 +91</span>
+                                                <input type="tel" id="phone" class="form-control custom-input"
+                                                    placeholder="Enter phone number" required>
+                                            </div>
+                                            <small class="text-danger d-none" id="phoneError">Enter valid 10 digit
+                                                number</small>
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label class="form-label">Interested Design Program *</label>
+                                            <select id="program" class="form-select custom-input" required>
+                                                <option value="">Select a program</option>
+                                                <option>Graphic Design</option>
+                                                <option>UI/UX Design</option>
+                                                <option>Fashion Design</option>
+                                                <option>Interior Design</option>
+                                            </select>
+                                            <small class="text-danger d-none" id="fnameError">Design Program is
+                                                required</small>
+                                        </div>
+
+                                        <div class="mb-4">
+                                            <label class="form-label">Preferred Duration *</label>
+                                            <select id="duration" class="form-select custom-input" required>
+                                                <option value="">Select duration</option>
+                                                <option>6 Months</option>
+                                                <option>1 Year</option>
+                                                <option>3 Year</option>
+                                                <option>4 Year</option>
+                                            </select>
+                                            <small class="text-danger d-none" id="fnameError">Duration is
+                                                required</small>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-dark w-100 py-2 fw-semibold">
+                                            Request Career Counselling
+                                        </button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="career-path-layout">
+            <div class="container">
+                <div class="row pb-lg-5 pb-3">
+                    <div class="col-lg-6">
+                        <div class="career-path-layout-heading">Still Searching For The Right
+                            <span style="color: #E53946;">Career Path?</span>
+                        </div>
+                        <div class="career-path-layout-shortdiscription">
+                            Not every student fits into a traditional career.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="creative-box">
+                            <div class="title-wrap">
+                                <span class="creative-number">01</span>
+                                <div class="creative-title">Creative Color Sense</div>
+                            </div>
+                            <p class="creative-text">
+                                They perceive subtle shifts in tone and hue that others overlook, bringing a richer
+                                palette to everything they create.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="creative-box">
+                            <div class="title-wrap">
+                                <span class="creative-number">02</span>
+                                <div class="creative-title">Creative Visual Thinking</div>
+                            </div>
+                            <p class="creative-text">
+                                They decode visual language effortlessly, understanding how shapes and symbols
+                                communicate meaning at a glance.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="creative-box">
+                            <div class="title-wrap">
+                                <span class="creative-number">03</span>
+                                <div class="creative-title">Space Visualization</div>
+                            </div>
+                            <p class="creative-text">They instinctively rearrange layouts and compositions, transforming
+                                ordinary spaces into harmonious environments.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row py-lg-5 py-3">
+                    <div class="col-lg-4">
+                        <div class="creative-box-img">
+                            <img src="images/photo-1.webp" class="img-fluid" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="creative-box">
+                            <div class="title-wrap">
+                                <!-- <span class="creative-number">02</span> -->
+                                <div class="creative-title">If that sounds like you — your mind already thinks like a
+                                    designer.</div>
+                            </div>
+                            <p class="creative-text">
+                                At INSD Whitefield, we help you transform that natural creativity into professional
+                                design skills.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="career-chose-layouts">
+            <div class="container">
+                <div class="row pb-lg-5 pb-3 custom-card">
+                    <div class="col-lg-6">
+                        <div class="career-path-layout-heading" style="color: #fff;">
+                            Choose The Design Career That Fits Your Creativity
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="row pb-lg-5 pb-3 custom-card">
+                    <div class="col-lg-12">
+                        <div class="career-chose-card">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="career-chose-card-img">
+                                        <img src="images/fs-desgina.webp" class="w-100 rounded" alt="" srcset="">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 d-flex align-items-center">
+                                    <div class="career-chose-card-contant ps-lg-5 ps-0">
+                                        <h1>Fashion Design</h1>
+                                        <p>Create styles, trends and fashion statements. Learn how fashion ideas
+                                            transform into real collections.</p>
+
+                                        <ul>
+                                            <li>Fashion illustration & styling</li>
+                                            <li>Fabric understanding & pattern making</li>
+                                            <li>Garment construction techniques</li>
+                                            <li>Fashion portfolio development</li>
+                                        </ul>
+
+                                        <div class="button-highlight">
+                                            <a href="#" class="applynow-buttons">Fashion Designer</a>
+                                            <a href="#" class="applynow-buttons">Stylist</a>
+                                            <a href="#" class="applynow-buttons">Fashion Illustrator</a>
+                                        </div>
+                                        <div class="button-highlight">
+                                            <a href="#" class="applynow-buttons">Fashion Entrepreneur</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row pb-lg-5 pb-3 custom-card">
+                    <div class="col-lg-12">
+                        <div class="career-chose-card">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="career-chose-card-img">
+                                        <img src="images/Glimpse (5).webp" class="w-100 rounded" alt="" srcset="">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 d-flex align-items-center">
+                                    <div class="career-chose-card-contant ps-lg-5 ps-0">
+                                        <h1>Interior Design</h1>
+                                        <p>Design spaces people love living and working in. Master the art of creating
+                                            functional, aesthetic environments.</p>
+
+                                        <ul>
+                                            <li>Space planning & layout design</li>
+                                            <li>Interior visualization & 3D tools</li>
+                                            <li>Materials, lighting & color concepts</li>
+                                            <li>Real interior design projects</li>
+                                        </ul>
+
+                                        <div class="button-highlight">
+                                            <a href="#" class="applynow-buttons">Interior Designer</a>
+                                            <a href="#" class="applynow-buttons">Space Planner</a>
+                                            <a href="#" class="applynow-buttons">Design Consultant</a>
+                                        </div>
+                                        <div class="button-highlight">
+                                            <a href="#" class="applynow-buttons">Interior Stylist</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row pb-lg-5 pb-3 custom-card">
+                    <div class="col-lg-12">
+                        <div class="career-chose-card">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="career-chose-card-img">
+                                        <img src="images/Glimpse (7).webp" class="w-100 rounded" alt="" srcset="">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 d-flex align-items-center">
+                                    <div class="career-chose-card-contant ps-lg-5 ps-0">
+                                        <h1>Graphic Design</h1>
+
+                                        <p>Design visuals that shape modern brands.
+                                            Learn how design communicates ideas, emotions, and identity.</p>
+
+                                        <ul>
+                                            <li>Branding & visual identity</li>
+                                            <li>Typography & layout design</li>
+                                            <li>Adobe creative tools</li>
+                                            <li>Real digital design projects</li>
+                                        </ul>
+
+                                        <div class="button-highlight">
+                                            <a href="#" class="applynow-buttons">Graphic Designer</a>
+                                            <a href="#" class="applynow-buttons">Brand Designer</a>
+                                            <a href="#" class="applynow-buttons">UI Designer</a>
+                                        </div>
+                                        <div class="button-highlight">
+                                            <a href="#" class="applynow-buttons">Visual Creator</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="why-student-layout">
+            <div class="container">
+                <div class="row pb-lg-5 pb-3">
+                    <div class="col-lg-6">
+                        <div class="career-path-layout-shortdiscription pb-3"
+                            style=" font-size: 14px; color: #fff; text-transform: uppercase;">
+                            Why Students Choose INSD
+                        </div>
+                        <div class="career-path-layout-heading pb-3" style="color: #fff;">
+                            Why Students Choose INSD Whitefield
+                        </div>
+                        <div class="career-path-layout-shortdiscription" style="color: #FFFFFFCC;">
+                            Not every student fits into a traditional career.
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="row">
+                            <div class="col-lg-6 pb-lg-5 pb-3">
+                                <div class="why-student-card-layouts d-flex align-items-start gap-3">
+                                    <div class="why-student-card-icons">
+                                        <img src="images/auto_stories.svg" alt="" srcset="">
+                                    </div>
+                                    <div>
+                                        <div class="why-student-card-layouts-heading">
+                                            Industry-Focused Learning</div>
+                                        <div class="why-student-card-layouts-shortdiscription">
+                                            Courses designed according to real design industry requirements.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 pb-lg-5 pb-3">
+                                <div class="why-student-card-layouts d-flex align-items-start gap-3">
+                                    <div class="why-student-card-icons">
+                                        <img src="images/aauto_stories.svg" alt="" srcset="">
+                                    </div>
+                                    <div>
+                                        <div class="why-student-card-layouts-heading">
+                                            Studio-Based Practical Training</div>
+                                        <div class="why-student-card-layouts-shortdiscription">
+                                            Learn by creating, experimenting and building real projects.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 pb-lg-5 pb-3">
+                                <div class="why-student-card-layouts d-flex align-items-start gap-3">
+                                    <div class="why-student-card-icons">
+                                        <img src="images/auto_sories.svg" alt="" srcset="">
+                                    </div>
+                                    <div>
+                                        <div class="why-student-card-layouts-heading">
+                                            Portfolio That Gets You Noticed</div>
+                                        <div class="why-student-card-layouts-shortdiscription">
+                                            Graduate with a professional portfolio that showcases your creativity.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 pb-lg-5 pb-3">
+                                <div class="why-student-card-layouts d-flex align-items-start gap-3">
+                                    <div class="why-student-card-icons">
+                                        <img src="images/auto_stries.svg" alt="" srcset="">
+                                    </div>
+                                    <div>
+                                        <div class="why-student-card-layouts-heading">
+                                            Mentorship From Experienced Designers</div>
+                                        <div class="why-student-card-layouts-shortdiscription">
+                                            Learn directly from faculty with real-world industry exposure.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="form-real-degin-layout">
+            <div class="container">
+                <div class="row pb-lg-5 pb-3">
+                    <div class="career-path-layout-shortdiscription pb-3 text-center"
+                        style="font-size: 14px; color: #E53946; text-transform: uppercase;">
+                        Student Work
+                    </div>
+                    <div class="career-path-layout-heading w-100 pb-3 text-center">
+                        From Ideas To <span style="color: #E53946;">Real Designs</span>
+                    </div>
+                    <div class="career-path-layout-shortdiscription text-center" style="color: rgba(63, 70, 82, 0.70);">
+                        Every student at INSD builds a professional portfolio that reflects their creativity.
+                        <br />Fashion
+                        collections, interior concepts, branding designs—students graduate with work that demonstrates
+                        their skills.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 pb-lg-0 pb-4">
+                        <div class="image-card">
+                            <img src="images/Component 13.png" alt="">
+                            <div class="image-overlay">
+                                <h5>Modern Living Concept</h5>
+                                <p>Interior</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 pb-lg-0 pb-4">
+                        <div class="image-card">
+                            <img src="images/false.png" alt="">
+                            <div class="image-overlay">
+                                <h5>Space Planning</h5>
+                                <p>Interior Project</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 pb-lg-0 pb-4">
+                        <div class="image-card">
+                            <img src="images/falsea.png" alt="">
+                            <div class="image-overlay">
+                                <h5>Brand Identity</h5>
+                                <p>Visual Design</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="design-world-layout">
+            <div class="container">
+                <div class="row justify-content-between pb-lg-5 pb-3 ali">
+                    <div class="col-lg-4">
+                        <div class="career-path-layout-heading pb-3" style="color: #fff;">
+                            Learn From The Real Design World
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="career-path-layout-shortdiscription" style="color: #FFFFFFCC;">
+                            Our students gain exposure to the professional design ecosystem through
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 pb-lg-4 pb-3">
+                        <div class="design-world-layout-card">
+                            <div class="design-world-layout-card-icon">
+                                <img src="images/icon-one.svg" alt="" srcset="">
+                            </div>
+                            <div class="design-world-layout-card-content">
+                                <h5>Industry Collaborations</h5>
+                                <p>Turn your business idea into reality and present to top investors</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 pb-lg-4 pb-3">
+                        <div class="design-world-layout-card">
+                            <div class="design-world-layout-card-icon">
+                                <img src="images/Component 1 (42).svg" alt="" srcset="">
+                            </div>
+                            <div class="design-world-layout-card-content">
+                                <h5>Real project briefs</h5>
+                                <p>Work on authentic challenges from real companies and build your portfolio</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 pb-lg-4 pb-3">
+                        <div class="design-world-layout-card">
+                            <div class="design-world-layout-card-icon">
+                                <img src="images/Component-(42).svg" alt="" srcset="">
+                            </div>
+                            <div class="design-world-layout-card-content">
+                                <h5>Design competitions</h5>
+                                <p>Showcase your skills and compete with peers in prestigious design challenges</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 pb-lg-4 pb-3">
+                        <div class="design-world-layout-card">
+                            <div class="design-world-layout-card-icon">
+                                <img src="images/Component-1-(42).svg" alt="" srcset="">
+                            </div>
+                            <div class="design-world-layout-card-content">
+                                <h5>Internship opportunities</h5>
+                                <p>Get hands-on experience with leading design studios and creative agencies</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 pb-lg-4 pb-3">
+                        <div class="design-world-layout-card">
+                            <div class="design-world-layout-card-icon">
+                                <img src="images/Component-1-(42).svg" alt="" srcset="">
+                            </div>
+                            <div class="design-world-layout-card-content">
+                                <h5> 100% Placement Assistance</h5>
+                                <p>Expert career support & interview prep. Launch your design career confidently.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 pb-lg-4 pb-3">
+                        <div class="design-world-layout-card">
+                            <div class="design-world-layout-card-icon">
+                                <img src="images/Component-1-(42).svg" alt="" srcset="">
+                            </div>
+                            <div class="design-world-layout-card-content">
+                                <h5>International Learning Opportunities</h5>
+                                <p>Global workshops & collaborations. Broaden your creative perspective.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <div class="creativity-layout">
+            <div class="container">
+                <div class="row pb-lg-5 pb-3">
+                    <div class="career-path-layout-heading w-100 pb-3 text-center">
+                        Where <span style="color: #E53946;">Creativity</span> Can Take You
+                    </div>
+                    <div class="career-path-layout-shortdiscription text-center" style="color: rgba(63, 70, 82, 0.70);">
+                        The design industry is growing rapidly across fashion, branding, digital media and interior
+                        spaces.
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-lg-6 pb-lg-4 pb-3">
+                        <div class="creativity-layout-image">
+                            <img src="images/Fashion Designer.webp" class="img-fluid" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pb-lg-4 pb-3">
+                        <div class="creativity-layout-image">
+                            <img src="images/Interior Designer.webp" class="img-fluid" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pb-lg-4 pb-3">
+                        <div class="creativity-layout-image">
+                            <img src="images/Graphic Designer.webp" class="img-fluid" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pb-lg-4 pb-3">
+                        <div class="creativity-layout-image">
+                            <img src="images/Brand Designer.webp" class="img-fluid rounded" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pb-lg-4 pb-3">
+                        <div class="creativity-layout-image">
+                            <img src="images/Creative Consultant.webp" class="img-fluid" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 pb-lg-4 pb-3">
+                        <div class="creativity-layout-image">
+                            <img src="images/Visual Artist.webp" class="img-fluid rounded" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="why-student-reallayout">
+            <div class="container">
+                <div class="row pb-lg-5 pb-3">
+                    <div class="career-path-layout-heading pb-3 w-100 text-center" style="color: #fff;">
+                        Learn From The Real Design World
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 pb-lg-0 pb-3">
+                        <div class="why-student-video-card">
+                            <iframe width="100%" height="450" class="rounded"
+                                src="https://www.youtube.com/embed/-OkQlY7KjDY"
+                                title="Design Your Future with INSD Whitefield 🎨✨" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 pb-lg-0 pb-3">
+                        <div class="why-student-video-card">
+
+                            <iframe width="100%" height="450" class="rounded"
+                                src="https://www.youtube.com/embed/YF9GT42HuHs"
+                                title="Create. Design. Grow. | INSD Whitefield 🎨✨" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 pb-lg-0 pb-3">
+                        <div class="why-student-video-card">
+                            <iframe width="100%" height="450" class="rounded"
+                                src="https://www.youtube.com/embed/GdKWDK2NplU"
+                                title="Turn Creativity Into Success | INSD Whitefield 🎨✨" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="creative-environment-layout">
+            <div class="container">
+                <div class="row pb-lg-5 pb-3">
+                    <div class="career-path-layout-heading pb-3 w-100 text-center">
+                        A Creative Environment That Inspires Innovation
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 pb-lg-4 pb-3">
+                        <div class="creativity-layout-image">
+                            <img src="images/Rectangle 8@1.5x.webp" class="img-fluid rounded" alt="" srcset="">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 pb-lg-4 pb-3">
+                        <div class="creativity-layout-image">
+                            <img src="images/Rectangle 9@1.5x.webp" class="img-fluid rounded" alt="" srcset="">
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-4 pb-lg-4 pb-3">
+                        <div class="creativity-layout-image">
+                            <img src="images/Rectangle 10@1.5x.webp" class="img-fluid rounded" alt="" srcset="">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 pb-lg-4 pb-3">
+                        <div class="creativity-layout-image">
+                            <img src="images/Rectangle 11@1.5x.webp" class="img-fluid rounded" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 pb-lg-4 pb-3">
+                        <div class="creativity-layout-image">
+                            <img src="images/Rectangle 11@1.5x.webp" class="img-fluid rounded" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="col-lg-4 pb-lg-4 pb-3">
+                        <div class="creativity-layout-image">
+                            <img src="images/Rectangle 12@1.5x.webp" class="img-fluid rounded" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="creative-career-layout">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="creative-career-layout-contant">
+                            <div class="career-path-layout-heading w-100 pb-3">
+                                Your Creative Career Starts Here
+                            </div>
+                            <div class="career-path-layout-shortdiscription pb-3"
+                                style="color: rgba(63, 70, 82, 0.70);">
+                                If creativity excites you more than ordinary careers, this is your moment to start
+                                building something meaningful.
+                            </div>
+                            <div class="creative-career-layout-contant-subheading pb-3 ">Programs Available</div>
+
+                            <div class="row">
+                                <div class="col-lg-12 pb-lg-3 pb-3">
+                                    <div class="why-student-card-layouts d-flex align-items-center gap-3">
+                                        <div class="why-student-card-icons">
+                                            <img src="images/Background - 2026-03-24T113705.540.svg" alt="" srcset="">
+                                        </div>
+                                        <div>
+                                            <div class="why-student-card-layouts-headings">
+                                                Fashion Design</div>
+                                            <div class="why-student-card-layouts-shortdiscriptions">
+                                                Turn creativity into trend-setting fashion.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 pb-lg-3 pb-3">
+                                    <div class="why-student-card-layouts d-flex align-items-center gap-3">
+                                        <div class="why-student-card-icons">
+                                            <img src="images/Background - 2026-03-24T114555.044.svg" alt="" srcset="">
+                                        </div>
+                                        <div>
+                                            <div class="why-student-card-layouts-headings">
+                                                Interior Design</div>
+                                            <div class="why-student-card-layouts-shortdiscriptions">
+                                                Design spaces that inspire and function beautifully.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-12 pb-lg-3 pb-3">
+                                    <div class="why-student-card-layouts d-flex align-items-center gap-3">
+                                        <div class="why-student-card-icons">
+                                            <img src="images/Background - 2026-03-24T114640.378.svg" alt="" srcset="">
+                                        </div>
+                                        <div>
+                                            <div class="why-student-card-layouts-headings">
+                                                Graphic Design</div>
+                                            <div class="why-student-card-layouts-shortdiscriptions">
+                                                Communicate ideas through powerful visual design.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row justify-content-end">
+                            <div class="col-lg-9">
+                                <div class="from-layout">
+                                    <div class="from-layout-heading"> Admissions Open</div>
+                                    <div class="from-layout-subheading">Book Free Design Career Counseling</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="footer-layout">Designed and Developed by Mediagarh</div>
+    </footer>
+    <style>
+        .fabiconswindow {
+            position: fixed;
+            right: 0px;
+            top: 45%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .fabiconswindow .nav-item {
+            width: 60px;
+            height: 60px;
+            background-color: #b01812;
+            color: #fff;
+            border-radius: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px !important;
+            cursor: pointer;
+            margin: 5px 0px;
+            transition: background-color 0.3s ease;
+        }
+
+        .fabiconswindow .nav-item:hover {
+            background-color: #b01812;
+        }
+
+        .fabiconswindow .nav-item a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .resenqerymenu {
+                width: 100%;
+                position: fixed;
+                z-index: 99999;
+                bottom: 0px;
+                left: 0px;
+                border-left: 0px;
+                background: #054C81;
+                display: block;
+                cursor: pointer;
+                text-align: center;
+                padding: 5px 0;
+                font-size: 17px;
+                color: #fff;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+                vertical-align: middle;
+                font-weight: 600;
+                padding: 0px !important;
+            }
+        }
+
+        .resenqerymenu .nav-item {
+            font-size: 25px;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-right: 1px solid #fff;
+            padding: 8px 4px;
+        }
+
+        .resenqerymenu .nav-item a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .icons {
+            font-size: 20px;
+        }
+
+        .whatsbtn {
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            background-color: #b01812;
+            color: #fff;
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        .whatsbtn:hover {
+            background-color: #b01812;
+        }
+
+        @media only screen and (max-width: 767px) {
+            #__eechatIcon {
+                right: 0px !important;
+            }
+
+            .indicator {
+                right: 65px !important;
+            }
+
+            #menu-header-menu {
+                display: block !important;
+            }
+
+            .navbar-item {
+                display: block;
+            }
+
+            #menu-item-122 {
+                margin-top: 10px;
+            }
+
+            .tpcoundown__btn {
+                margin-top: 20px;
+                margin-bottom: 30px;
+            }
+
+            .section__content p {
+                color: var(--tp-common-white);
+                font-size: 14px;
+            }
+        }
+
+        .programmain {
+            padding: 30px 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .fromprogram {
+            background-color: #fff;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            padding: 20px 15px;
+            border-radius: 10px;
+        }
+
+        .fromprogram .fromhedinngs {
+            font-size: 22px;
+            line-height: 30px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .fromprogram input {
+            margin-bottom: 20px;
+            border-radius: 2px;
+            border: solid 1px #e0e0e0;
+            padding: 8px 10px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        .fromprogram select {
+            margin-bottom: 10px;
+            border-radius: 2px;
+            border: solid 1px #e0e0e0;
+            padding: 10px 10px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 15px;
+        }
+
+        .fromprogram select:focus {
+            outline: none;
+            border-color: #e0e0e0;
+            box-shadow: none;
+        }
+
+        .fromprogram input:focus {
+            outline: none;
+            border-color: #e0e0e0;
+            box-shadow: none;
+        }
+
+        .register-btn {
+            padding: 12px 30px;
+            background-color: #b11714;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .register-btn:hover {
+            padding: 12px 30px;
+            background-color: #7e0907;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .courseoferd {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 30px;
+            text-align: center;
+            padding-bottom: 10px;
+
+        }
+
+        .displayclass {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .courseoferd .courseoffer {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 28px;
+            color: #174a88;
+            text-align: center;
+
+        }
+
+        .custom-input.is-invalid {
+            border-color: #dc3545 !important;
+            background-image: none !important;
+        }
+
+        .custom-input.is-valid {
+            border-color: #198754 !important;
+        }
+
+        .text-danger {
+            font-size: 0.8rem;
+        }
+    </style>
+
+    <div class="fabiconswindow d-lg-block ">
+        <ul class="mob-action nav flex-column">
+            <li class="nav-item" style="background-color: #FFFFFF!important; ">
+                <a href="tel:+919535701386">
+                    <span class="icon" style="color: #E53946;"><i class="fa-solid fa-phone"></i></span>
+                </a>
+            </li>
+            <li class="nav-item" style="background-color: #1DAA61!important;">
+                <a href="https://api.whatsapp.com/send?phone=+919535701386&text=Hey" target="_blank">
+                    <span class="icon"><i class="fa-brands fa-whatsapp"></i></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+<script>
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw8CaHpvWZsgIafUCWBLeRD-NVRyWlRsMnhhiza1CJ44_ejZcZpGI9qF6tE-p5r4vEI/exec";
+
+    document.getElementById("registrationForm").addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const form = e.target;
+
+        const data = {
+            first_name: document.getElementById("first_name").value,
+            last_name: document.getElementById("last_name").value,
+            email: document.getElementById("email").value,
+            phone: document.getElementById("phone").value,
+            program: document.getElementById("program").value,
+            duration: document.getElementById("duration").value,
+            url: window.location.href
+        };
+
+        try {
+            await fetch(GOOGLE_SCRIPT_URL, {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                mode: "no-cors"
+            });
+
+            window.location.href = "https://admissions.insdwhitefield.com/thank-you.html";
+
+        } catch (error) {
+        }
+    });
+</script>
+<script>document.getElementById('registrationForm').addEventListener('submit', function (e) {
+        e.preventDefault(); // Form submit hone se rokna taaki check kar sakein
+
+        let isValid = true;
+
+        // Sabhi required inputs ko select karein
+        const fields = [
+            { id: 'first_name', errorId: 'fnameError' },
+            { id: 'last_name' },
+            { id: 'email' },
+            { id: 'phone', errorId: 'phoneError' },
+            { id: 'program' },
+            { id: 'duration' }
+        ];
+
+        fields.forEach(field => {
+            const input = document.getElementById(field.id);
+            const value = input.value.trim();
+
+            // Basic Empty Check
+            if (value === "") {
+                showError(input, field.errorId);
+                isValid = false;
+            }
+            // Email Format Check
+            else if (field.id === 'email' && !validateEmail(value)) {
+                showError(input);
+                isValid = false;
+            }
+            // Phone Number Check (Must be 10 digits)
+            else if (field.id === 'phone' && (value.length !== 10 || isNaN(value))) {
+                showError(input, field.errorId);
+                isValid = false;
+            }
+            // If everything is fine
+            else {
+                showSuccess(input, field.errorId);
+            }
+        });
+
+        if (isValid) {
+            alert("Form Submitted Successfully!");
+            // Iske baad aap form submit kar sakte hain ya redirect kar sakte hain
+            // window.location.href = "thank-you.html"; 
+        }
+    });
+
+    // Helper Functions
+    function showError(input, errorId) {
+        input.classList.add('is-invalid');
+        input.classList.remove('is-valid');
+        if (errorId) document.getElementById(errorId).classList.remove('d-none');
+    }
+
+    function showSuccess(input, errorId) {
+        input.classList.remove('is-invalid');
+        input.classList.add('is-valid');
+        if (errorId) document.getElementById(errorId).classList.add('d-none');
+    }
+
+    function validateEmail(email) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }</script>
+<script src="javascript/javascript.js"></script>
+
+</html>
