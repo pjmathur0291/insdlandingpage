@@ -22,10 +22,10 @@
 </head>
 
 <body>
-     <!-- Google Tag Manager (noscript) -->
-     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCQXBH4M"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        <!-- End Google Tag Manager (noscript) -->
+                 <!-- Google Tag Manager (noscript) -->
+                 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TCQXBH4M"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+                    <!-- End Google Tag Manager (noscript) -->
     <div class="header-layout-section">
         <div class="container">
             <div class="row">
@@ -101,7 +101,7 @@
                                                 <label class="form-label">Last Name *</label>
                                                 <input type="text" id="last_name" class="form-control custom-input"
                                                     placeholder="Enter your last name" required>
-                                                <small class="text-danger d-none" id="fnameError">Last name is
+                                                <small class="text-danger d-none" id="lnameError">Last name is
                                                     required</small>
                                             </div>
                                         </div>
@@ -110,8 +110,7 @@
                                             <label class="form-label">Email Address *</label>
                                             <input type="email" id="email" class="form-control custom-input"
                                                 placeholder="your.email@example.com" required>
-                                            <small class="text-danger d-none" id="fnameError">Email is
-                                                required</small>
+                                            <small class="text-danger d-none" id="emailError">Email is required</small>
                                         </div>
 
                                         <div class="mb-3">
@@ -134,7 +133,7 @@
                                                 <option>Fashion Design</option>
                                                 <option>Interior Design</option>
                                             </select>
-                                            <small class="text-danger d-none" id="fnameError">Design Program is
+                                            <small class="text-danger d-none" id="programError">Program is
                                                 required</small>
                                         </div>
 
@@ -147,7 +146,7 @@
                                                 <option>3 Year</option>
                                                 <option>4 Year</option>
                                             </select>
-                                            <small class="text-danger d-none" id="fnameError">Duration is
+                                            <small class="text-danger d-none" id="durationError">Duration is
                                                 required</small>
                                         </div>
 
@@ -1094,21 +1093,75 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
 </script>
-<script>
-    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw8CaHpvWZsgIafUCWBLeRD-NVRyWlRsMnhhiza1CJ44_ejZcZpGI9qF6tE-p5r4vEI/exec";
 
-    document.getElementById("registrationForm").addEventListener("submit", async function (e) {
+<script>
+    const form = document.getElementById("registrationForm");
+    const submitBtn = form.querySelector("button");
+
+    form.addEventListener("submit", async function (e) {
         e.preventDefault();
 
-        const form = e.target;
+        let isValid = true;
+
+        // Get values
+        let fname = document.getElementById("first_name").value.trim();
+        let lname = document.getElementById("last_name").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let phone = document.getElementById("phone").value.trim();
+        let program = document.getElementById("program").value;
+        let duration = document.getElementById("duration").value;
+
+        // Hide all errors first
+        document.querySelectorAll(".text-danger").forEach(el => el.classList.add("d-none"));
+
+        // Validation
+        if (fname === "") {
+            document.getElementById("fnameError").classList.remove("d-none");
+            isValid = false;
+        }
+
+        if (lname === "") {
+            document.getElementById("lnameError").classList.remove("d-none");
+            isValid = false;
+        }
+
+        if (email === "" || !/^\S+@\S+\.\S+$/.test(email)) {
+            document.getElementById("emailError").classList.remove("d-none");
+            isValid = false;
+        }
+
+        if (!/^[0-9]{10}$/.test(phone)) {
+            document.getElementById("phoneError").classList.remove("d-none");
+            isValid = false;
+        }
+
+        if (program === "") {
+            document.getElementById("programError").classList.remove("d-none");
+            isValid = false;
+        }
+
+        if (duration === "") {
+            document.getElementById("durationError").classList.remove("d-none");
+            isValid = false;
+        }
+
+        // ❌ Stop if invalid
+        if (!isValid) return;
+
+        // ✅ Button Loading State
+        submitBtn.innerText = "Submitting...";
+        submitBtn.style.opacity = "0.6";
+        submitBtn.disabled = true;
+
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw8CaHpvWZsgIafUCWBLeRD-NVRyWlRsMnhhiza1CJ44_ejZcZpGI9qF6tE-p5r4vEI/exec";
 
         const data = {
-            first_name: document.getElementById("first_name").value,
-            last_name: document.getElementById("last_name").value,
-            email: document.getElementById("email").value,
-            phone: document.getElementById("phone").value,
-            program: document.getElementById("program").value,
-            duration: document.getElementById("duration").value,
+            first_name: fname,
+            last_name: lname,
+            email: email,
+            phone: phone,
+            program: program,
+            duration: duration,
             url: window.location.href
         };
 
@@ -1122,75 +1175,55 @@
                 mode: "no-cors"
             });
 
-            window.location.href = "https://admissions.insdwhitefield.com/thank-you";
+            // ✅ Redirect after success
+            window.location.href = "thank-you";
 
         } catch (error) {
+            // ❌ If error restore button
+            submitBtn.innerText = "Request Career Counselling";
+            submitBtn.style.opacity = "1";
+            submitBtn.disabled = false;
+
+            alert("Something went wrong!");
         }
     });
-</script>
-<script>document.getElementById('registrationForm').addEventListener('submit', function (e) {
-        e.preventDefault(); // Form submit hone se rokna taaki check kar sakein
+    document.querySelectorAll("#registrationForm input, #registrationForm select").forEach(field => {
 
-        let isValid = true;
+        field.addEventListener("input", function () {
 
-        // Sabhi required inputs ko select karein
-        const fields = [
-            { id: 'first_name', errorId: 'fnameError' },
-            { id: 'last_name' },
-            { id: 'email' },
-            { id: 'phone', errorId: 'phoneError' },
-            { id: 'program' },
-            { id: 'duration' }
-        ];
+            let value = this.value.trim();
 
-        fields.forEach(field => {
-            const input = document.getElementById(field.id);
-            const value = input.value.trim();
+            if (this.id === "first_name" && value !== "") {
+                document.getElementById("fnameError").classList.add("d-none");
+            }
 
-            // Basic Empty Check
-            if (value === "") {
-                showError(input, field.errorId);
-                isValid = false;
+            if (this.id === "last_name" && value !== "") {
+                document.getElementById("lnameError").classList.add("d-none");
             }
-            // Email Format Check
-            else if (field.id === 'email' && !validateEmail(value)) {
-                showError(input);
-                isValid = false;
+
+            if (this.id === "email" && /^\S+@\S+\.\S+$/.test(value)) {
+                document.getElementById("emailError").classList.add("d-none");
             }
-            // Phone Number Check (Must be 10 digits)
-            else if (field.id === 'phone' && (value.length !== 10 || isNaN(value))) {
-                showError(input, field.errorId);
-                isValid = false;
+
+            if (this.id === "phone" && /^[0-9]{10}$/.test(value)) {
+                document.getElementById("phoneError").classList.add("d-none");
             }
-            // If everything is fine
-            else {
-                showSuccess(input, field.errorId);
+
+            if (this.id === "program" && value !== "") {
+                document.getElementById("programError").classList.add("d-none");
             }
+
+            if (this.id === "duration" && value !== "") {
+                document.getElementById("durationError").classList.add("d-none");
+            }
+
         });
 
-        if (isValid) {
-            alert("Form Submitted Successfully!");
-            // Iske baad aap form submit kar sakte hain ya redirect kar sakte hain
-            // window.location.href = "thank-you.html"; 
-        }
     });
 
-    // Helper Functions
-    function showError(input, errorId) {
-        input.classList.add('is-invalid');
-        input.classList.remove('is-valid');
-        if (errorId) document.getElementById(errorId).classList.remove('d-none');
-    }
-
-    function showSuccess(input, errorId) {
-        input.classList.remove('is-invalid');
-        input.classList.add('is-valid');
-        if (errorId) document.getElementById(errorId).classList.add('d-none');
-    }
-
-    function validateEmail(email) {
-        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    }</script>
+</script>
 <script src="javascript/javascript.js"></script>
 
 </html>
+
+<!-- window.location.href = "https://admissions.insdwhitefield.com/thank-you.html"; -->
